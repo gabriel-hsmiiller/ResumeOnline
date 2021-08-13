@@ -1,0 +1,11 @@
+<div
+scrollTop 
+scrollBottom 
+(onScrollTop)="callbackScrollTop($event)" 
+(onScrollBottom)="callbackScrollBottom($event)"
+[@fadeOutLeft]="scrollingBottom ? 'false' : null" 
+[@fadeOutRight]="scrollingTop ? 'false' : null"
+[@fadeInLeft]="prevUrl === '/jobs' ? 'true' : null"
+[@fadeInRight]="prevUrl === '/about-me' ? 'true' : null">
+    <p>school works!</p>
+</div>

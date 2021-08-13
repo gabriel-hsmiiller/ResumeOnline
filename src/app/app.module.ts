@@ -3,14 +3,33 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ScrollTopDirective } from './directives/scroll-top.directive';
+import { ScrollBottomDirective } from './directives/scroll-bottom.directive';
+import { StartComponent } from './pages/start/start.component';
+import { AboutMeComponent } from './pages/about-me/about-me.component';
+import { SchoolComponent } from './pages/school/school.component';
+import { JobsComponent } from './pages/jobs/jobs.component';
+import { SkillsComponent } from './pages/skills/skills.component';
+import { SocialComponent } from './pages/social/social.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StartComponent,
+    AboutMeComponent,
+    SchoolComponent,
+    JobsComponent,
+    SkillsComponent,
+    SocialComponent,
+    ScrollBottomDirective,
+    ScrollTopDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
