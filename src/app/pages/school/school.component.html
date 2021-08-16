@@ -8,6 +8,43 @@ scrollBottom
     [@fadeOutRight]="scrollingTop ? 'false' : null"
     [@fadeInLeft]="prevUrl === '/jobs' ? 'true' : null"
     [@fadeInRight]="prevUrl === '/about-me' ? 'true' : null">
-        <p>school works!</p>
+        <h2>School and Graduation</h2>
+
+        <div class="timeline">
+            <div class="icon-container">
+                <mat-icon>school</mat-icon>
+            </div>
+            <div *ngFor="let grad of graduations" class="graduation">
+                <div class="local">
+                    <span>
+                        {{ grad.local }}
+                    </span>
+                    <br>
+                    <span>
+                        ({{ grad.level }})
+                    </span>
+                </div>
+                <hr>
+                <div class="period">
+                    <span>
+                        {{ grad.from }}
+                    </span>
+                    <span>
+                        {{ grad.to }}
+                    </span>
+                </div>
+                <div class="name">
+                    <span>
+                        {{ grad.name }}
+                    </span>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="gradient"
+    [@slideOutLeft]="scrollingTop || scrollingBottom ? 'false' : null" 
+    [@slideInLeft]="'true'"></div>
+    <div class="gradient"
+    [@slideOutLeft]="scrollingTop || scrollingBottom ? 'false' : null" 
+    [@slideInLeft]="'true'"></div>
 </section>

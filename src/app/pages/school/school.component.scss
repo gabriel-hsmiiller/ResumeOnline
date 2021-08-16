@@ -1,1 +1,125 @@
 @import '../../styles/section';
+@import '../../styles/colors';
+
+.container{
+    flex-direction: column !important;
+    align-items: stretch !important;
+
+    h2{
+        font-family: 'Big Shoulders Display', cursive;
+        text-align: center;
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    .timeline{
+        display: flex;
+        justify-content: center;
+        
+        .icon-container{
+            display: flex;
+            align-items: center;
+            height: min-content;
+            width: min-content;
+            border-radius: 50%;
+            padding: 4px;
+            justify-content: center;
+            border: solid 4px $pink-primary;
+            color: $pink-primary;
+            margin-top: calc(5rem + 8px);
+            margin-right: -1px;
+            z-index: 5;
+
+            mat-icon{
+                $size: 40px;
+                font-size: $size;
+                height: $size;
+                width: $size;
+            }
+        }
+
+        .graduation{
+            width: 40%;
+            font-size: 32px;
+            line-height: 40px;
+
+            hr{
+                border: none;
+                background-image: linear-gradient(90deg,$pink-primary,$white, $pink-primary);
+                background-size: 50% 100%;
+                height: 8px;
+                z-index: 10;
+
+                animation: glowing-line 8s infinite;
+            }
+
+            .local,.period,.name{
+                padding: 8px;
+            }
+
+            .local,.name{
+                text-align: center;
+            }
+
+            .period{
+                display: flex;
+                justify-content: space-between;
+
+                & > span{
+                    display: block;
+                    transform-origin: 0 0;
+                    margin-top: 40px;
+                    transform: rotate(-90deg);
+
+                    &::after{
+                        content: "";
+                        height: 16px;
+                        right: -15px;
+                        top: 8px;
+                        transform: rotate(90deg);
+                        position: absolute;
+                        border: solid 2px white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.gradient{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-image: linear-gradient(-10deg, transparent 50%, $deep-purple);
+    background-position: 100% -45%;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+
+    animation: glowing-edges 5s ease-in-out infinite alternate;
+    
+    &:last-child{
+        background-image: linear-gradient(-170deg, transparent 50%, $deep-purple);
+        background-position: 100% 145%;
+    }
+
+}
+
+@keyframes glowing-edges {
+    from {
+        background-size: 100% 50%;
+    }
+    to{
+        background-size: 100% 55%;
+    }
+}
+
+@keyframes glowing-line {
+    from {
+        background-position: 0% 100%;
+    }
+    to{
+        background-position: 100% 100%;
+    }
+}
