@@ -1,10 +1,10 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { NavigationStart, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
-import { filter } from 'rxjs/operators';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PreviousRouteService } from 'src/app/services/previous-route.service';
 import { fadeInLeftAnimation, fadeInRightAnimation } from '../../animations/fade-in.animation'
 import { fadeOutLeftAnimation, fadeOutRightAnimation } from '../../animations/fade-out.animation'
+import { slideInLeftAnimation,slideInRightAnimation } from '../../animations/slide-in.animation'
+import { slideOutLeftAnimation,slideOutRightAnimation } from '../../animations/slide-out.animation'
 
 @Component({
   selector: 'app-about-me',
@@ -15,6 +15,10 @@ import { fadeOutLeftAnimation, fadeOutRightAnimation } from '../../animations/fa
     fadeInRightAnimation,
     fadeOutLeftAnimation,
     fadeOutRightAnimation,
+    slideInLeftAnimation,
+    slideInRightAnimation,
+    slideOutLeftAnimation,
+    slideOutRightAnimation
   ]
 })
 export class AboutMeComponent implements OnInit {

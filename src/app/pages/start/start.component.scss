@@ -10,7 +10,7 @@
     background-image: linear-gradient(90deg, rgba($deep-purple, .6), rgba($dark, .2));
     background-size: 50% 100%;
     background-repeat: no-repeat;
-    animation: glowing 5s infinite alternate ease-in-out;
+    animation: glowing-side 5s infinite alternate ease-in-out;
 }
 
 .container{
@@ -19,8 +19,6 @@
     display: flex;
     align-items: center;
     padding: 20px 12vw; 
-
-    font-family: 'Big Shoulders Display', cursive;
     color: rgba($white, .8);
     font-size: 5rem;
     font-weight: 400;
@@ -76,7 +74,7 @@
     }
 }
 
-@keyframes glowing {
+@keyframes glowing-side {
     from {
         background-size: 50% 100%;
     }

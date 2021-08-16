@@ -1,1 +1,86 @@
 @import '../../styles/section';
+@import '../../styles/colors';
+
+.container{
+    flex-direction: column;
+    align-items: stretch !important;
+    
+    .info{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 32px;
+        line-height: 40px;
+        
+        .contact{
+            ul{
+                list-style: none;
+                padding: 0;
+                
+                li{
+                    display: flex;
+                    align-items: center;
+                    
+                    mat-icon{
+                        $size: 32px;
+                        font-size: $size;
+                        width: $size;
+                        height: $size;
+                        margin-right: 8px;
+
+                        color: $blue-primary;
+                    }
+                }
+            }
+        }
+
+        .about{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: right;
+
+            img{
+                width: 20vw;
+                height: 20vw;
+                margin-left: 8px;
+                object-fit: cover;
+                border-radius: 24px;
+            }
+        }
+    }
+
+    .abstract{
+        font-size: 40px;
+        line-height: 48px;
+    }
+}
+
+.gradient{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-image: linear-gradient(10deg, transparent 50%, $deep-purple);
+    background-position: 100% -45%;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+
+    animation: glowing-edges 5s ease-in-out infinite alternate;
+    
+    &:last-child{
+        background-image: linear-gradient(170deg, transparent 50%, $deep-purple);
+        background-position: 100% 145%;
+    }
+
+}
+
+@keyframes glowing-edges {
+    from {
+        background-size: 100% 50%;
+    }
+    to{
+        background-size: 100% 55%;
+    }
+}

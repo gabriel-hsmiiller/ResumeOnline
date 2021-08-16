@@ -8,6 +8,50 @@ scrollBottom
     [@fadeOutRight]="scrollingTop ? 'false' : null"
     [@fadeInLeft]="prevUrl === '/school' ? 'true' : null"
     [@fadeInRight]="prevUrl === '/' ? 'true' : null">
-        <p>about-me works!</p>
+        <div class="info">
+            <div class="contact">
+                <ul>
+                    <li>
+                        <mat-icon class="material-icons-outlined">email</mat-icon>
+                        <span>gbmiiller@hotmail.com</span>
+                    </li>
+                    <li>
+                        <mat-icon>location_on</mat-icon>
+                        <span>Campinas, São Paulo</span>
+                    </li>
+                    <li>
+                        <mat-icon>phone</mat-icon>
+                        <span>(19) 9 9894-4099</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="about">
+                <div>
+                    <span>20 y.o.</span>
+                    <br>
+                    <span>12-jan-2001</span>
+                </div>
+                <div>
+                    <img src="https://http.cat/404">
+                </div>
+            </div>
+        </div>
+        <div class="abstract">
+            <article>
+                Hi! How I just sayed a page ago, my name is Gabriel, a brazilian 
+                Front-End developer since 2019, and this is my web-resume. Born in 
+                2001, I studied IT at the first time on middle school, when I fell in love 
+                with web development. After this I ingressed the university where I am 
+                graduating in System Analysis and Development. See more about my 
+                trajetory on next page
+            </article>
+        </div>
     </div>
+    <div></div>
+    <div class="gradient"
+    [@slideOutRight]="scrollingTop || scrollingBottom ? 'false' : null" 
+    [@slideInRight]="'true'"></div>
+    <div class="gradient"
+    [@slideOutRight]="scrollingTop || scrollingBottom ? 'false' : null" 
+    [@slideInRight]="'true'"></div>
 </section>
