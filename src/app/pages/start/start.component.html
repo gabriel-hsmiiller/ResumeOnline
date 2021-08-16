@@ -1,11 +1,29 @@
 <section
 scrollBottom 
 (onScrollBottom)="callbackScrollBottom($event)">
+    <div class="gradient" [@fadeOutLeft]="scrollingBottom ? 'false' : null" [@fadeInLeft]="'true'"></div>
+
     <div class="container"
     [@fadeOutLeft]="scrollingBottom ? 'false' : null"
     [@fadeInLeft]="'true'">
-        <p>start works!</p>
+        <div class="left">
+            <p>
+                Hi, <br>
+                I am <br>
+                <span class="bolder">Gabriel</span>
+            </p>
+        </div>
+        <div class="right">
+            <p>
+                Brazilian <br>
+                <span class="bolder">Front-end Developer</span>
+            </p>
+            <div class="flag">
+                <img src="assets/images/Flag.png">
+            </div>
+        </div>
     </div>
+
     <div class="more-content" (click)="callbackScrollBottom(true)" [@fadeOutLeft]="scrollingBottom ? 'false' : null" [@fadeInLeft]="'true'">
         <mat-icon style="font-size: 40px; height: 40px; width: 40px;">chevron_right</mat-icon>
         <span>Horizontal<br>scrolling</span>

@@ -1,6 +1,51 @@
 @import '../../styles/section';
 @import '../../styles/colors';
 
+.gradient{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    background-image: linear-gradient(90deg, rgba($deep-purple, .6), rgba($dark, .2));
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    animation: glowing 5s infinite alternate ease-in-out;
+}
+
+.container{
+    border: solid 1px $white;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    padding: 20px 12vw; 
+
+    font-family: 'Big Shoulders Display', cursive;
+    color: rgba($white, .8);
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 5rem;
+    
+    .left,.right{
+        .bolder{
+            color: $white;
+            font-weight: 500;
+        }
+    }
+    
+    .right{
+        flex: 1;
+        text-align: right;
+
+        .flag{
+            height: 5rem;
+            img{
+                height: 100%;
+            }
+        }
+    }
+}
+
 .more-content{
     position: absolute;
     right: 0;
@@ -19,8 +64,23 @@
     }
 }
 
+
+
 @keyframes bouncing {
-    to {
+    from {
         transform: translateX(8px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes glowing {
+    from {
+        background-size: 50% 100%;
+    }
+    to{
+        background-size: 100% 100%;
     }
 }
