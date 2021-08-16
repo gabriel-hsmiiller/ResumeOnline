@@ -3,16 +3,16 @@ import { animate, animation, keyframes, style, transition, trigger } from '@angu
 const fadeInLeft =
     animation([
         animate('500ms 0ms ease-out', keyframes([
-            style({ opacity: 0, transform: 'translate3d(-160px, 0, 0)', easing: 'ease-out', offset: 0 }),
-            style({ opacity: 1, transform: 'translate3d(0,0,0)', easing: 'ease-out', offset: 1 })
+            style({ opacity: 0, transform: 'translate(-4%)', easing: 'ease-out', offset: 0 }),
+            style({ opacity: 1, transform: 'translate(0)', easing: 'ease-out', offset: 1 })
         ])),
     ]);
 
 const fadeInRight =
     animation([
         animate('500ms 0ms ease-out', keyframes([
-            style({ opacity: 0, transform: 'translate3d(160px, 0, 0)', easing: 'ease-out', offset: 0 }),
-            style({ opacity: 1, transform: 'translate3d(0,0,0)', easing: 'ease-out', offset: 1 })
+            style({ opacity: 0, transform: 'translate(4%)', easing: 'ease-out', offset: 0 }),
+            style({ opacity: 1, transform: 'translate(0)', easing: 'ease-out', offset: 1 })
         ])),
     ]);
     

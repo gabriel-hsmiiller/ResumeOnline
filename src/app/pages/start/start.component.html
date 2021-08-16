@@ -1,7 +1,13 @@
-<div
+<section
 scrollBottom 
-(onScrollBottom)="callbackScrollBottom($event)"
-[@fadeOutLeft]="scrollingBottom ? 'false' : null"
-[@fadeInLeft]="'true'">
-    <p>start works!</p>
-</div>
+(onScrollBottom)="callbackScrollBottom($event)">
+    <div class="container"
+    [@fadeOutLeft]="scrollingBottom ? 'false' : null"
+    [@fadeInLeft]="'true'">
+        <p>start works!</p>
+    </div>
+    <div class="more-content" (click)="callbackScrollBottom(true)" [@fadeOutLeft]="scrollingBottom ? 'false' : null" [@fadeInLeft]="'true'">
+        <mat-icon style="font-size: 40px; height: 40px; width: 40px;">chevron_right</mat-icon>
+        <span>Horizontal<br>scrolling</span>
+    </div>
+</section>

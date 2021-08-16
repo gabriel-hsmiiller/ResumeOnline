@@ -1,13 +1,13 @@
-<div 
-style="display: absolute; left: 10%"
+<section 
 scrollTop 
 scrollBottom 
 (onScrollTop)="callbackScrollTop($event)" 
-(onScrollBottom)="callbackScrollBottom($event)" 
-[@fadeOutLeft]="scrollingBottom ? 'false' : null" 
-[@fadeOutRight]="scrollingTop ? 'false' : null"
-[@fadeInLeft]="prevUrl === '/school' ? 'true' : null"
-[@fadeInRight]="prevUrl === '/' ? 'true' : null"
->
-    <p>about-me works!</p>
-</div>
+(onScrollBottom)="callbackScrollBottom($event)">
+    <div class="container"
+    [@fadeOutLeft]="scrollingBottom ? 'false' : null" 
+    [@fadeOutRight]="scrollingTop ? 'false' : null"
+    [@fadeInLeft]="prevUrl === '/school' ? 'true' : null"
+    [@fadeInRight]="prevUrl === '/' ? 'true' : null">
+        <p>about-me works!</p>
+    </div>
+</section>

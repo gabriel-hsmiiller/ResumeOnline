@@ -1,0 +1,26 @@
+@import '../../styles/section';
+@import '../../styles/colors';
+
+.more-content{
+    position: absolute;
+    right: 0;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $blue-secondary;
+    cursor: pointer;
+
+    animation: bouncing .525s ease-out infinite alternate;
+
+    & > span {
+        text-align: center;
+    }
+}
+
+@keyframes bouncing {
+    to {
+        transform: translateX(8px);
+    }
+}

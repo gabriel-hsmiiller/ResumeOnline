@@ -1,11 +1,13 @@
-<div
+<section
 scrollTop 
 scrollBottom 
 (onScrollTop)="callbackScrollTop($event)" 
-(onScrollBottom)="callbackScrollBottom($event)"
-[@fadeOutLeft]="scrollingBottom ? 'false' : null" 
-[@fadeOutRight]="scrollingTop ? 'false' : null"
-[@fadeInLeft]="prevUrl === '/skills' ? 'true' : null"
-[@fadeInRight]="prevUrl === '/school' ? 'true' : null">
-    <p>jobs works!</p>
-</div>
+(onScrollBottom)="callbackScrollBottom($event)">
+    <div class="container"
+    [@fadeOutLeft]="scrollingBottom ? 'false' : null" 
+    [@fadeOutRight]="scrollingTop ? 'false' : null"
+    [@fadeInLeft]="prevUrl === '/skills' ? 'true' : null"
+    [@fadeInRight]="prevUrl === '/school' ? 'true' : null">
+        <p>jobs works!</p>
+    </div>
+</section>

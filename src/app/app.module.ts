@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatIconModule } from '@angular/material/icon'
+
 import { ScrollTopDirective } from './directives/scroll-top.directive';
 import { ScrollBottomDirective } from './directives/scroll-bottom.directive';
 import { StartComponent } from './pages/start/start.component';
@@ -29,7 +31,8 @@ import { SocialComponent } from './pages/social/social.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
