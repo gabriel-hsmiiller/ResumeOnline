@@ -43,6 +43,12 @@
             font-size: 32px;
             line-height: 40px;
 
+            &:last-of-type{
+                hr{
+                    border-radius: 0 4px 4px 0;
+                }
+            }
+
             hr{
                 border: none;
                 background-image: linear-gradient(90deg,$pink-primary,$white, $pink-primary);
@@ -64,6 +70,7 @@
             .period{
                 display: flex;
                 justify-content: space-between;
+                text-align: right;
 
                 & > span{
                     display: block;

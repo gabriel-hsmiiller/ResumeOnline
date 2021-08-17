@@ -8,6 +8,39 @@ scrollBottom
     [@fadeOutRight]="scrollingTop ? 'false' : null"
     [@fadeInLeft]="prevUrl === '/skills' ? 'true' : null"
     [@fadeInRight]="prevUrl === '/school' ? 'true' : null">
-        <p>jobs works!</p>
+        <h2>Jobs</h2>
+
+        <div class="timeline">
+            <div class="icon-container">
+                <mat-icon>work</mat-icon>
+            </div>
+            <div *ngFor="let job of jobs" class="jobs">
+                <div class="local">
+                    <span>
+                        {{ job.company }}
+                    </span>
+                </div>
+                <hr>
+                <div class="period">
+                    <span>
+                        {{ job.from }}
+                    </span>
+                    <span>
+                        {{ job.to }}
+                    </span>
+                </div>
+                <div class="name">
+                    <span>
+                        {{ job.position }}
+                    </span>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="gradient"
+    [@slideOutRight]="scrollingTop || scrollingBottom ? 'false' : null" 
+    [@slideInRight]="'true'"></div>
+    <div class="gradient"
+    [@slideOutRight]="scrollingTop || scrollingBottom ? 'false' : null" 
+    [@slideInRight]="'true'"></div>
 </section>
