@@ -8,7 +8,37 @@ scrollBottom
     [@fadeOutRight]="scrollingTop ? 'false' : null"
     [@fadeInLeft]="prevUrl === '/social' ? 'true' : null"
     [@fadeInRight]="prevUrl === '/jobs' ? 'true' : null">
-        <p>skills works!</p>
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="languages">
+                <h3>Languages</h3>
+                <div class="skill-list">
+                    <app-rating *ngFor="let skill of languageSkills" [skill]="skill"></app-rating>
+                </div>
+            </div>
+            <div class="technical-skills">
+                <h3>Technical skills</h3>
+                <div class="skill-list">
+                    <app-rating *ngFor="let skill of technicalSkills" [skill]="skill"></app-rating>
+                </div>
+            </div>
+            <div class="soft-skills">
+                <h3>Soft skills</h3>
+                <div class="skill-list">
+                    <app-rating *ngFor="let skill of softSkills" [skill]="skill"></app-rating>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="gradient"    
+    [@slideOutLeft]="scrollingBottom ? 'false' : null" 
+    [@slideOutRight]="scrollingTop ? 'false' : null"
+    [@slideInLeft]="prevUrl === '/social' ? 'true' : null"
+    [@slideInRight]="prevUrl === '/jobs' ? 'true' : null"></div>
+    <div class="gradient"
+    [@slideOutLeft]="scrollingBottom ? 'false' : null" 
+    [@slideOutRight]="scrollingTop ? 'false' : null"
+    [@slideInLeft]="prevUrl === '/social' ? 'true' : null"
+    [@slideInRight]="prevUrl === '/jobs' ? 'true' : null"></div>
 </section>
 

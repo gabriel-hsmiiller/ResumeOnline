@@ -1,9 +1,9 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { NavigationStart, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
-import { filter } from 'rxjs/operators';
 import { fadeInLeftAnimation, fadeInRightAnimation } from 'src/app/animations/fade-in.animation';
 import { fadeOutLeftAnimation, fadeOutRightAnimation } from 'src/app/animations/fade-out.animation';
+import { slideInLeftAnimation,slideInRightAnimation } from '../../animations/slide-in.animation'
+import { slideOutLeftAnimation,slideOutRightAnimation } from '../../animations/slide-out.animation'
 import { PreviousRouteService } from 'src/app/services/previous-route.service';
 
 @Component({
@@ -15,9 +15,38 @@ import { PreviousRouteService } from 'src/app/services/previous-route.service';
     fadeInRightAnimation,
     fadeOutLeftAnimation,
     fadeOutRightAnimation,
+    slideInLeftAnimation,
+    slideInRightAnimation,
+    slideOutLeftAnimation,
+    slideOutRightAnimation
   ]
 })
 export class SkillsComponent implements OnInit {
+
+  languageSkills = [
+    { name: 'Portuguese', rating: 5 },
+    { name: 'English', rating: 3 },
+  ]
+  
+  technicalSkills = [
+    { name: 'HTML, CSS, JS', rating: 5 },
+    { name: 'Angular', rating: 4 },
+    { name: 'Node.JS', rating: 4 },
+    { name: 'SASS', rating: 3 },
+    { name: 'React', rating: 3 },
+    { name: 'React Native', rating: 3 },
+    { name: '.NET Core', rating: 3 },
+    { name: 'SQL/MySQL', rating: 3 },
+    { name: 'Flutter', rating: 2 },
+    { name: 'NestJS', rating: 2 },
+    { name: 'Git', rating: 2 },
+  ]
+  
+  softSkills = [
+    { name: 'Teaching', rating: 4 },
+    { name: 'Comunication', rating: 3 },
+    { name: 'Group Work', rating: 3 },
+  ]
 
   show = false;
   scrollingTop = false;

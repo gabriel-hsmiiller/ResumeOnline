@@ -1,0 +1,4 @@
+<h4>{{ skill.name }}</h4>
+<div class="rating">
+    <div *ngFor="let val of getValue() as values" class="level" [ngClass]="{ 'filled' : val }"></div>
+</div>

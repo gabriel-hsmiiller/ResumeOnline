@@ -15,6 +15,7 @@ import { SchoolComponent } from './pages/school/school.component';
 import { JobsComponent } from './pages/jobs/jobs.component';
 import { SkillsComponent } from './pages/skills/skills.component';
 import { SocialComponent } from './pages/social/social.component';
+import { RatingComponent } from './pages/skills/rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SocialComponent } from './pages/social/social.component';
     SkillsComponent,
     SocialComponent,
     ScrollBottomDirective,
-    ScrollTopDirective
+    ScrollTopDirective,
+    RatingComponent
   ],
   imports: [
     BrowserModule,
