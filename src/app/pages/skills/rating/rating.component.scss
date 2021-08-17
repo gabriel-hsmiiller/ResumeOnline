@@ -15,23 +15,29 @@ h4{
 .level{
     $size: 16px;
     width: $size;
-    height: $size;
+    height: $size/2;
     display: inline-flex;
-    border-radius: $size/2;
+    // border-radius: $size/2;
     border: solid 2px $pink-secondary;
-    margin: 4px;
+    margin: 4px 0;
 
     &.filled{
-        background-image: radial-gradient($white, $pink-secondary 95%);
-        background-size: 200% 200%;
-        background-position: center;
+        background-image: linear-gradient(90deg, $pink-secondary, $white, $pink-secondary);
+        background-size: 200% 100%;
+        background-position: 100% 100%;
+         &:not(:last-of-type){
+             border-right: none;
+         }
+         &:not(:first-of-type){
+             border-left: none;
+         }
 
-        animation: glowing-spheres 1.25s ease-out infinite alternate;
+        animation: glowing-spheres 4.75s infinite ease-out;
     }
 }
 
 @keyframes glowing-spheres {
     to{
-        background-size: 100% 100%;
+        background-position: -100% 100%;
     }
 }

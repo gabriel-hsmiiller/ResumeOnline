@@ -25,6 +25,10 @@
         display: flex;
         justify-content: space-around;
 
+        app-rating{
+            margin: 12px;
+        }
+
         .languages, .soft-skills{
             flex: 1;
         }
@@ -39,7 +43,6 @@
                 
                 app-rating{
                     flex: 1;
-                    margin: 12px;
                     // max-width: 33%;
                 }
             }
