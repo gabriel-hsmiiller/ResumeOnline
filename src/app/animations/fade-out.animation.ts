@@ -1,5 +1,13 @@
 import { animate, animation, keyframes, state, style, transition, trigger } from '@angular/animations';
 
+const fadeOut =
+    animation([
+        animate('500ms 0ms ease-out', keyframes([
+            style({ opacity: 1, easing: 'ease-out', offset: 0 }),
+            style({ opacity: 0, easing: 'ease-out', offset: 1 }),
+        ])),
+    ]);
+
 const fadeOutLeft =  
     animation([
         animate('500ms 0ms ease-out', keyframes([
@@ -14,6 +22,12 @@ const fadeOutRight =
             style({ opacity: 1, transform: 'translateX(0)', easing: 'ease-out', offset: 0 }),
             style({ opacity: 0, transform: 'translateX(4%)', easing: 'ease-out', offset: 1 }),
         ])),
+    ]);
+
+export const fadeOutAnimation =
+    trigger('fadeOut', [
+        state('false',style({ opacity: 0 })),
+        transition('* => false', [fadeOut])
     ]);
 
 export const fadeOutLeftAnimation =

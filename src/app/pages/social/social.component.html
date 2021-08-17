@@ -1,9 +1,50 @@
 <section
 scrollTop 
 (onScrollTop)="callbackScrollTop($event)">
+    <div class="back" (click)="toStart()"
+    [@fadeOutRight]="scrollingTop ? 'false' : null" 
+    [@fadeInRight]="'true'">
+        <mat-icon class="material-icons-outlined" style="transform: rotate(180deg);">forward</mat-icon>
+        <div>
+            <span>Back to <br> start</span>
+        </div>
+    </div>
     <div class="container"
     [@fadeOutRight]="scrollingTop ? 'false' : null" 
     [@fadeInRight]="'true'">
-        <p>social works!</p>
+        <div class="links">
+            <div class="link">
+                <a [href]="github" target="blank">
+                    <img src="assets/images/github.svg" width="32">
+                    {{ github }}
+                </a>
+            </div>
+            <div class="link">
+                <a [href]="linkedin" target="blank">
+                    <img src="assets/images/linkedin.svg" width="32">
+                    {{ linkedin }}
+                </a>
+            </div>
+        </div>
     </div>
+    <footer
+    [@fadeOutRight]="scrollingTop ? 'false' : null" 
+    [@fadeInRight]="'true'">
+        <span>See the source of this resume</span>
+        <a [href]="link" target="blank">{{ link }} <mat-icon>launch</mat-icon></a>
+    </footer>
 </section>
+<div class="background">
+    <div class="sphere-1"
+    [@fadeOut]="scrollingTop ? 'false' : null" 
+    [@fadeIn]="'true'"></div>
+    <div class="sphere-2"
+    [@fadeOut]="scrollingTop ? 'false' : null" 
+    [@fadeIn]="'true'"></div>
+    <div class="sphere-3"
+    [@fadeOut]="scrollingTop ? 'false' : null" 
+    [@fadeIn]="'true'"></div>
+    <div class="sphere-4"
+    [@fadeOut]="scrollingTop ? 'false' : null" 
+    [@fadeIn]="'true'"></div>
+</div>

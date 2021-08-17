@@ -1,1 +1,164 @@
 @import '../../styles/section';
+@import '../../styles/colors';
+
+section{
+    z-index: 1;
+}
+
+.back{
+    position: absolute;
+    top: 16px;
+    left: 72px;
+    display: flex;
+    align-items: center;
+    color: $blue-secondary;
+    cursor: pointer;
+    transition: all .3s ease-out;
+
+    & > div{
+        margin-left: 8px;
+        font-size: 16px;
+    }
+
+    &:hover{
+        transform: translateX(-8px);
+    }
+}
+
+.container{
+    flex-direction: column !important;
+    align-items: stretch !important;
+}
+
+.links{
+    font-size: 24px;
+    line-height: 32px;
+
+    .link{
+        display: flex;
+        align-items: center;
+        margin: 24px;
+        max-width: 35%;
+
+        img{
+            margin-right: 8px;
+        }
+        
+    }
+}
+
+footer, .links{
+    a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+
+        &:hover{
+            text-decoration: underline;
+            
+            mat-icon{
+                text-decoration: none;
+            }
+        }
+
+        mat-icon{
+            margin-left: 8px;
+        }
+    }
+}
+
+footer{
+    position: absolute;
+    bottom: 72px;
+    right: 72px;
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: right;
+    color: $pink-secondary;
+}
+
+.background{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+
+    @mixin sphereAnim($name){
+        @keyframes #{$name} {
+            to{
+                @content;
+            }
+        }
+    }
+
+    @mixin sphere($size,$color,$animationName,$animationDuration: 2s,$opacity: 1){
+        height: $size;
+        width: $size;
+        position: absolute;
+        opacity: $opacity;
+
+        animation: $animationName $animationDuration ease-in-out alternate infinite;
+
+        background-image: radial-gradient($color, transparent 60%);
+    }
+
+    // purple
+    .sphere-1{
+        $size: 300px;
+        $half: $size/2;
+        $animationName: animSphere1;
+        @include sphere($size, $deep-purple,$animationName,5.25s,.4);
+        @include sphereAnim($animationName){
+            left: calc(8% - #{$half});
+            top: calc(12% - #{$half});
+        };
+        left: calc(5% - #{$half});
+        top: calc(10% - #{$half});
+    }
+    
+    // light-blue
+    .sphere-2{
+        $size: 250px;
+        $half: $size/2;
+        $animationName: animSphere2;
+        @include sphere($size, $blue-secondary,$animationName,8s,.5);
+        @include sphereAnim($animationName){
+            left: calc(15% - #{$half});
+            top: calc(78% - #{$half});
+        };
+        left: calc(10% - #{$half});
+        top: calc(80% - #{$half});
+    }
+    
+    // dark-blue
+    .sphere-3{
+        $size: 200px;
+        $half: $size/2;
+        $animationName: animSphere3;
+        @include sphere($size, $blue-primary,$animationName,4.5s,.4);
+        @include sphereAnim($animationName){
+            left: calc(51% - #{$half});
+            top: calc(61% - #{$half});            
+        };
+        left: calc(50% - #{$half});
+        top: calc(65% - #{$half});
+    }
+    
+    // pink
+    .sphere-4{
+        $size: 500px;
+        $half: $size/2;
+        $animationName: animSphere4;
+        @include sphere($size, $pink-secondary,$animationName,2s,.6);
+        @include sphereAnim($animationName){
+            right: 2%;
+        };
+        right: 0;
+        top: calc(50% - #{$half});
+    }
+}
